@@ -10,6 +10,7 @@ body {
 }
 .content {
   color: #09fbba;
+  opacity: 1;
   transition: 1s;
 }
 h1 {
@@ -30,6 +31,26 @@ p {
   left: -230px;
   transition: 0.5s ease-out;
   z-index: 4;
+}
+#side-bar.back {
+  left: 0 !important;
+}
+.back span {
+  position: absolute;
+}
+.back span:nth-child(1) {
+  transform: rotate(45deg);
+  background: #ff7575;
+}
+.back span:nth-child(2) {
+  opacity: 0;
+}
+.back span:nth-child(3) {
+  transform: rotate(-45deg);
+  background: #ff7575;
+}
+.back ~ .content {
+  opacity: 0.3;
 }
 .toggle-btn {
   position: absolute;
